@@ -8,7 +8,7 @@
 1. Put module source code ([Heatmap.min.js](https://github.com/yandex/mapsapi-heatmap/blob/master/build/Heatmap.min.js)) on your CDN.
 
 2. Load both [Yandex Maps JS API 2.1](http://api.yandex.com/maps/doc/jsapi/) and module source code by adding following code into &lt;head&gt; section of your page
-```
+```html
 <head>
     ...
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -19,7 +19,7 @@
 ```
 
 3. Get access to module functions by using [ymaps.modules.require](http://api.yandex.com/maps/doc/jsapi/2.1/ref/reference/modules.require.xml) method
-```
+```js
 ymaps.modules.require(['Heatmap'], function (Heatmap) {
     var heatmap = new Heatmap();
 });
@@ -93,7 +93,7 @@ Destroys `Heatmap` instance
 
 * Displaying heatmap over geographical map:
 
-```
+```js
 ymaps.modules.require(['Heatmap'], function (Heatmap) {
     var data = [[37.782551, -122.445368], [37.782745, -122.444586]],
         heatmap = new Heatmap(data);
@@ -103,7 +103,7 @@ ymaps.modules.require(['Heatmap'], function (Heatmap) {
 
 * Updating heatmap data:
 
-```
+```js
 ymaps.modules.require(['Heatmap'], function (Heatmap) {
     var data = [[37.782551, -122.445368], [37.782745, -122.444586]],
         heatmap = new Heatmap(data);
@@ -116,7 +116,7 @@ ymaps.modules.require(['Heatmap'], function (Heatmap) {
 
 * Changing heatmap representation options.
 
-```
+```js
 ymaps.modules.require(['Heatmap'], function (Heatmap) {
     var data = [[37.782551, -122.445368], [37.782745, -122.444586]],
         heatmap = new Heatmap(data);
@@ -126,7 +126,7 @@ ymaps.modules.require(['Heatmap'], function (Heatmap) {
 });
 ```
 
-```
+```js
 ymaps.modules.require(['Heatmap'], function (Heatmap) {
     var data = [[37.782551, -122.445368], [37.782745, -122.444586]],
         heatmap = new Heatmap(data);
@@ -138,4 +138,3 @@ ymaps.modules.require(['Heatmap'], function (Heatmap) {
     heatmap.setMap(myMap);
 });
 ```
-
